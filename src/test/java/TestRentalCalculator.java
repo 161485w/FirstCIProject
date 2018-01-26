@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class CarRentalCalculatorTest {
+public class TestRentalCalculator {
 
 	@Test
 	//TC1 : First timer, Honda Fit, 1 Day, expect $61.75
