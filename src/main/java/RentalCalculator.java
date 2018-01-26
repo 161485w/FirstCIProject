@@ -36,8 +36,8 @@ public class RentalCalculator {
 				//no discount at all
 				if (carModel.equals("Honda"))
 					rentalFees = 65.0*duration;
-				else if (carModel.equals("Honda"))
-					rentalFees = 65.0*duration;
+				else if (carModel.equals("Toyota"))
+					rentalFees = 80.0*duration;
 			}
 		}
 		
