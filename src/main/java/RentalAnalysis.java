@@ -68,7 +68,7 @@ public class RentalAnalysis {
 				System.out.println(counter);
 				avg = total / counter; 
 				
-				return Math.round(avg);
+				return Math.floor(avg);
 				
 			
 		}
