@@ -5,7 +5,6 @@ public class RentalAnalysis {
 	public RentalAnalysis() {}
 	
 	public ArrayList<RentalRecord> createRecords(){
-		
 		ArrayList<RentalRecord> rList= new ArrayList<RentalRecord>();
 		
 		//for Honda Fit records
@@ -51,17 +50,43 @@ public class RentalAnalysis {
 	}
 	
 	//complete this method
-	public double aveMonthlyRentalDur(String carModel, ArrayList<RentalRecord> rlist) {
+		public double aveMonthlyRentalDur(String carModel, ArrayList<RentalRecord> rlist) { 
+			double total = 0.0;
+			double avg;
+			int counter = 0;
+				for(int i = 0; i < rlist.size(); i++){
+					if(carModel == rlist.get(i).getModel()){
+						total += rlist.get(i).getDuration();
+						counter += 1;
+						
+					}else if(carModel == rlist.get(i).getModel()){
+						total += rlist.get(i).getDuration();
+						counter += 1;
+					}
+			}
+				System.out.println(total);
+				System.out.println(counter);
+				avg = total / counter; 
+				
+				return Math.round(avg);
+				
+			
+		}
 		
-		//... 
-		
-	}
-	
-	//complete this method
-	public  double totalRev(String carModel, ArrayList<RentalRecord> rlist) {
-
-		//... 
-		
-	}
+		//complete this method
+		public double totalRev(String carModel, ArrayList<RentalRecord> rlist) {
+			double total = 0.0;
+				for(int i = 0; i < rlist.size(); i++){
+					if(carModel == rlist.get(i).getModel()){
+						total += rlist.get(i).getRevenue();
+						
+					}else if(carModel == rlist.get(i).getModel()){
+						total += rlist.get(i).getRevenue();
+					}
+			}
+				System.out.println(total);
+				return total;
+			
+		}
 	
 }
